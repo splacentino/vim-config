@@ -8,7 +8,7 @@
 	path = bundle/seoul256.vim
 	url = https://github.com/junegunn/seoul256.vim.git
 [submodule "bundle/tabular"]
-	path = bundle/tablular
+	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
