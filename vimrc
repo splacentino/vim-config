@@ -225,5 +225,7 @@ com V !xdvi %:r &
 com Pdf w|!pdflatex % 	
 com Xpdf !xpdf %:r.pdf & 	
 
+com Pdc w|!pandoc % -o %:r.pdf
+
 filetype plugin on
 filetype indent on
