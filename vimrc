@@ -46,7 +46,8 @@ set background=dark " dark | light "
 "colorscheme solarized
 "
 "" SEOUL COLORS
-colorscheme seoul256
+"colorscheme seoul256
+colorscheme flattown
 
 if $TERM =~ '256color'
 	set t_Co=256
