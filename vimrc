@@ -8,7 +8,7 @@ set nocompatible
 call pathogen#infect()
 
 "
-set shell=/bin/zsh
+set shell=$SHELL
 
 " Indentation
 set autoindent
@@ -77,19 +77,7 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-"let g:airline_section_b ='%{getcwd()}'
-"let g:airline_section_b ='%#warningmsg#'
-
-
 set laststatus=2
-"set statusline=%F%m%r%h%w[%L]%{fugitive#statusline()}[%{&ff}]%y[%p%%][%04l,%04v]
-"set statusline=%a\
-"set statusline+=%F
-"set statusline+=%1*
-"set statusline+=%m
-"set statusline+=%*
-"set statusline+=%10{getfsize(expand('%'))}o
-"set statusline+=%10l/%L(%2c)
 highlight StatusLine term=bold cterm=bold ctermbg=9
 "END-AIRLINE
 
@@ -128,14 +116,22 @@ map <F9> :NERDTreeTabsToggle<CR>
 "TABULAR
 let g:tabular_loaded = 1     
 "END TABULAR
+"
 "SYNTASTIC
 map <F8> :SyntasticCheck<CR>
 let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = '-std=c++0x'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -pedantic-errors'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
+
+let g:syntastic_c_compiler = 'gcc'
+let g:syntastic_compiler_options = '-std=c99 -pedantic-errors'
+let g:syntastic_check_header = 1
+let g:syntastic_auto_refresh_includes = 1
+
 let g:syntastic_scala_compiler = 'scalac'
 let g:syntastic_scala_checkers = 'fsc'
+
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 "END-SYNTASTIC
