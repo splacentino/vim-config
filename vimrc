@@ -111,6 +111,7 @@ imap <right> <nop>
 
 "NERDTREE
 map <F9> :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
 "END-NERDTREE
 
 "TABULAR
@@ -120,7 +121,7 @@ let g:tabular_loaded = 1
 "SYNTASTIC
 map <F8> :SyntasticCheck<CR>
 let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -pedantic-errors'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -pedantic-errors' 
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
 
@@ -129,12 +130,21 @@ let g:syntastic_compiler_options = '-std=c99 -pedantic-errors'
 let g:syntastic_check_header = 1
 let g:syntastic_auto_refresh_includes = 1
 
+let g:syntastic_c#_compiler = 'mcs'
+let g:syntastic_c#_check_header = 1
+let g:syntastic_c#_auto_refresh_includes = 1
+
 let g:syntastic_scala_compiler = 'scalac'
 let g:syntastic_scala_checkers = 'fsc'
 
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 "END-SYNTASTIC
+
+"ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+"
 
 "LATEX
 let g:tex_indent_items = 1
@@ -163,9 +173,6 @@ map <silent> <F6> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
 "inoremap <A-j> <C-o>j
 "inoremap <A-k> <C-o>k
 "inoremap <A-l> <C-o>l
-
-au BufRead,BufNewFile *.as set filetype=java 	
-au FileType *.java set    dictionary+=$VIMRUNTIME/dict/java.dic complete+=k
 
 " Generics abbreviations
 abbr retrun return

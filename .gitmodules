@@ -1,6 +1,9 @@
 [submodule "bundle/a.vim"]
 	path = bundle/a.vim
 	url = https://github.com/vim-scripts/a.vim.git
+[submodule "bundle/flattown"]
+	path = bundle/flattown
+	url =  https://github.com/vim-scripts/a.vim.git
 [submodule "bundle/HTML-AutoCloseTag"]
 	path = bundle/HTML-AutoCloseTag
 	url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
